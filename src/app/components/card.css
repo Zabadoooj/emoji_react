@@ -9,11 +9,14 @@ main{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 .card{
     width: 306px;
     height: 186px;
 
     padding: 10px;
+
+    overflow: hidden;
 
     display: flex;
     flex-direction: column;
@@ -29,6 +32,15 @@ main{
     border: #DEE2E6 solid 1px;
 
     filter: drop-shadow(0 5px 3px rgba(0, 0, 0, 0.16));
+
+    scale: 1;
+
+    transition: scale 0.1s ease-out;
+}
+
+
+.card:hover{
+    scale: 1.1;
 }
 
 .card h1{

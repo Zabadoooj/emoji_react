@@ -8,45 +8,49 @@ import Card from "./card";
 
 export default function EmojiFinder() {
 
-  const [input_, setInput] = useState('')
-  const [emojis, setEmojis] = useState<IEmoji[]>([])
-  const [error, setError] = useState<String | null>(null)
+    const [input, setInput] = useState("")
+    const [emojis, setEmojis] = useState<IEmoji[]>([])
+    const [error, setError] = useState<String | null>(null)
 
-  const fetchData = async () => {
-    const data = await getEmojis(input_)
-    setEmojis(data)
 
-    console.log("Text");
     
-  }
+        const fetchData = async () => {
+            const data = await getEmojis(input)
+            setEmojis(data)
 
-  useEffect(() => {
-    console.log(123)
-    fetchData()
+            console.log("Text");
+        }
+
+    useEffect(() => {
+
+        console.log(123)
+        fetchData()
+
+        console.log(emojis)
+    }, [input])
+
     
-    console.log(emojis)
-  }, [input_])
 
-  return (
-    <div className="main">
-      <header className="header">
+    return (
+        <div className="main">
+            <header className="header">
 
-        <h1>Emoji Finder</h1>
-        <p>Find emoji by keywords</p>
+                <h1>Emoji Finder</h1>
+                <p>Find emoji by keywords</p>
 
-      </header>
+            </header>
 
-      <input id="a" className="search"
-       placeholder="Search emoji"
-       value={input_}
-       onChange={(e) => {setInput(e.currentTarget.value)}}
-       />
+            <input id="a" className="search"
+                placeholder="Search emoji"
+                value={input}
+                onChange={(e) => { setInput(e.currentTarget.value); console.log(e) }}
+            />
 
-      <main>
-        <Card />
-        <Card />
-        <Card />
-      </main>
-    </div>
-  );
+            <main>
+                {
+                    emojis.map((emoji) => <Card />)
+                }
+            </main>
+        </div>
+    );
 }

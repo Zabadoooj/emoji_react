@@ -1,4 +1,4 @@
-
+"use client"
 
 import EmojiFinder from "./components/EmojiFinder";
 

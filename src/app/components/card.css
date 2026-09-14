@@ -1,0 +1,26 @@
+
+
+
+main{
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 100px;
+}
+
+.card{
+    width: 316px;
+    height: 186px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-items: center;
+    align-items: center;
+
+    background-color: white;
+    border-radius: 4px;
+
+    filter: drop-shadow(0 5                                                                                                                                                                                                                                                                                                                                                                                                                                               px 3px rgba(0, 0, 0, 0.16));
+}

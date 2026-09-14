@@ -33,7 +33,6 @@
 
 
 .search{
-  color: #ABB5BE;
 
   position: absolute;
   font-size: 24px;
@@ -48,6 +47,9 @@
 
   border: solid #CED4DA 1px;
   border-radius: 4px;
+}
+.search::placeholder{
+  color: #ABB5BE;
 }
 
 body{ 

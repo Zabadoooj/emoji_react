@@ -16,6 +16,7 @@ export default function Home() {
       <main>
         <Card />
         <Card />
+        <Card />
       </main>
     </div>
   );

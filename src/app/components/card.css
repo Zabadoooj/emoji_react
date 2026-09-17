@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Gaegu&family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 main{
     display: flex;
@@ -10,8 +10,9 @@ main{
     margin-top: 100px;
     margin-bottom: 100px;
 
-    font-family: "Schoolbell", cursive;
-    font-weight: 100;
+    font-family: "Mali", cursive;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 
@@ -48,9 +49,15 @@ main{
 .card h3, .card p{
     cursor: text;
 }
+.card h3{
+    font-size: 20px;
+}
+.card p{
+    font-size: 14px;
+}
 
 .card h1{
-    transition: scale 0.1s ease;
+    transition: scale 0.2s ease;
 }
 
 .main:has(.card:hover) .card h1:hover{
@@ -58,16 +65,17 @@ main{
 }
 
 .main:has(.card:hover) .card:hover h1 {
-    animation: cool_hover 0.5s ease-in-out 1;
+    animation: cool_hover_emoji 0.5s ease-in-out 1;
 }
 
 .main:has(.card:hover) .card{
-    opacity: 0.4;
+    opacity: 0.5;
     scale: 0.99;
 }
 .main:has(.card:hover) .card:hover{
     opacity: 1;    
     scale: 1.1;
+    animation: card_hover 0.2s ease-out 1;
 }
 
 .card h1{
@@ -78,8 +86,15 @@ main{
     text-decoration: underline;
 }
 
-@keyframes cool_hover {
+@keyframes cool_hover_emoji {
     0% { scale: 1.0;}
     40% { scale: 1.5;}
     100% {scale: 1.0;}
+}
+
+@keyframes card_hover {
+    0% {scale: 1;}
+    40% {scale: 1.15;}
+    100% {scale: 1.1;}
+    
 }

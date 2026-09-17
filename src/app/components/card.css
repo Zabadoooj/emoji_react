@@ -1,10 +1,12 @@
 main{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
     gap: 20px;
 
     margin-top: 100px;
+    margin-bottom: 100px;
 
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -13,6 +15,8 @@ main{
 .card{
     width: 306px;
     height: 186px;
+
+    cursor: pointer;
 
     padding: 10px;
 
@@ -35,11 +39,19 @@ main{
 
     scale: 1;
 
-    transition: scale 0.1s ease-out;
+    transition: scale 0.1s ease-out, opacity 0.2s ease-out;
 }
 
+.card h3, .card p{
+    cursor: text;
+}
 
-.card:hover{
+.main:has(.card:hover) .card{
+    opacity: 0.4;
+    scale: 0.99;
+}
+.main:has(.card:hover) .card:hover{
+    opacity: 1;    
     scale: 1.1;
 }
 

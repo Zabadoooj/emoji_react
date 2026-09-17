@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
 
 
 
@@ -15,7 +16,8 @@
   justify-content: center;
   gap: 12px;
 
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Cherry Bomb One", system-ui;
+  letter-spacing: 4px;
 
   filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.16));
 }
@@ -52,6 +54,6 @@
   color: #ABB5BE;
 }
 
-body{ 
+body{
   background-color: #EDEEF3;
 }

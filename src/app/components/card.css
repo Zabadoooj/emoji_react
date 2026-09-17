@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Gaegu&family=Schoolbell&display=swap');
+
 main{
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +10,8 @@ main{
     margin-top: 100px;
     margin-bottom: 100px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Schoolbell", cursive;
+    font-weight: 100;
 }
 
 
@@ -46,6 +49,18 @@ main{
     cursor: text;
 }
 
+.card h1{
+    transition: scale 0.1s ease;
+}
+
+.main:has(.card:hover) .card h1:hover{
+    scale: 1.9;
+}
+
+.main:has(.card:hover) .card:hover h1 {
+    animation: cool_hover 0.5s ease-in-out 1;
+}
+
 .main:has(.card:hover) .card{
     opacity: 0.4;
     scale: 0.99;
@@ -61,4 +76,10 @@ main{
 
 .card h3{
     text-decoration: underline;
+}
+
+@keyframes cool_hover {
+    0% { scale: 1.0;}
+    40% { scale: 1.5;}
+    100% {scale: 1.0;}
 }
